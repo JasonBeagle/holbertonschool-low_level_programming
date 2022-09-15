@@ -1,0 +1,3 @@
+#README
+
+First C assignment
