@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- *main - prints letters a-z in lower and upper case
+ *main - prints letters a-z in lower
  *Return: always 0 (success)
  */
 int main(void)
