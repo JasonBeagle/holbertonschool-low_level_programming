@@ -3,7 +3,7 @@
 /**
  *print_sign - print sign of number
  *
- * @n - number to be determined
+ *@n: number to be determined
  *
  *Return: 1 if positive
  *	0 if zero
