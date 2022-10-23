@@ -19,10 +19,23 @@ struct dog
 
 /**Initializes a variable of type struct dog**/
 void init_dog(struct dog *d, char *name, float age, char *owner);
+
 /**Prints struct dog**/
 void print_dog(struct dog *d);
+
 /**Defines a new type, dog_t of struct dog type**/
 typedef struct dog dog_t;
+
 /**Creates a new dog**/
 dog_t *new_dog(char *name, float age, char *owner);
+
+/**Gives length of a string**/
+int _strlen(char *str);
+
+/**Copies a string including null byte**/
+char *_strcpy(char *dest, char *src);
+
+/**Frees dogs**/
+void free_dog(dog_t *d);
+
 #endif
