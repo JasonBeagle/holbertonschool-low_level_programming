@@ -5,8 +5,8 @@
 * @array: pointer to integer array.
 * @size: size of array.
 * @action: pointer to function
-* Return: void*/
-
+* Return: void
+* */
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
 	/*Var to index array*/
