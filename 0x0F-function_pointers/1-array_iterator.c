@@ -5,17 +5,19 @@
 * @array: pointer to integer array.
 * @size: size of array.
 * @action: pointer to function
-* Return: void
-*/
+* Return: void*/
 
 void array_iterator(int *array, size_t size, void (*action)(int))
 {
-	unsigned int ind = 0;
-
+	/*Var to index array*/
+	unsigned int index = 0;
+	/*If array, size, action are equal*/
 	if (array && size && action)
-		while (ind < size)
+		/*And while index is less than size*/
+		while (index < size)
 		{
-			action(array[ind]);
-			ind++;
+			/*Carry out action at index of array*/
+			action(array[index]);
+			index++;
 		}
 }
