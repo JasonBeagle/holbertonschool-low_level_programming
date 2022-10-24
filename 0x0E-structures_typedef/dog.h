@@ -1,13 +1,14 @@
 #ifndef DOG_H
 #define DOG_H
 
+#include <stdio.h>
+#include <stdlib.h>
+
 /**
 *struct dog - a structure logs information aboout dogs.
 *@name: first member, dogs name.
 *@age: second member, dogs age.
 *@owner: third member, dogs owner.
-*
-*
 */
 
 struct dog

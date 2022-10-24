@@ -1,38 +1,39 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include "dog.h"
 
 /**
 * new_dog - creates a new dog entry.
-* _strlen: gives length of string.
-* _strcpy: copies a string including null byte.
 * @name: dogs name.
 * @age: dogs age.
 * @owner: dogs owner.
-*
-* _strlen - gives length of a string.
-* _strcpy - copies string including null pointer.
 *
 * Return: pointer to the new dog entry.
 **/
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
+	/*Pointer dog_t of dog type*/
 	dog_t *dog;
 	int len1, len2;
-
+	/*Determines length, of string name & owner*/
+	/*Assigns value of name to len1, and owner to len2*/
 	len1 = _strlen(name);
 	len2 = _strlen(owner);
-
+	/*Value at *dog is malloc size of dog_t*/
 	dog = malloc(sizeof(dog_t));
+	/*If *dog is empty, return NULL*/
 	if (dog == NULL)
 		return (NULL);
-
+	/*Allocate memory for member name in pointer god, *dog */
 	dog->name = malloc((sizeof(char)) * (len1 + 1));
+	/*If name is empty, free memory and return null*/
 	if (dog->name == NULL)
 	{
 		free(dog);
 		return (NULL);
 	}
+
 	dog->owner = malloc((sizeof(char)) * (len2 + 1));
 	if (dog->owner == NULL)
 	{
@@ -47,10 +48,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 	return (dog);
 }
 /**
-* _strcpy - copies string at @src, including null byte, to  point determined by @dest.
-*@dest: where to copy string.
-*@src: string to copy
-*Return: pointer to destinatin string.
+* _strcpy - copies string at @src, including null byte,
+* to  point determined by @dest.
+* @dest: where to copy string.
+* @src: string to copy
+* Return: pointer to destinatin string.
 **/
 char *_strcpy(char *dest, char *src)
 {
@@ -64,7 +66,6 @@ char *_strcpy(char *dest, char *src)
 
 	return (dest);
 }
-
 /**
 *_strlen - returns length of a string.
 *@str: string to be evaluated.
