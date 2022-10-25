@@ -1,10 +1,7 @@
 #include "3-calc.h"
 
 /**
- * Functions for calculator operations.
-*/
-
-/** op_add - sums two numbers
+ * op_add - sums two numbers
  * @a: first integer.
  * @b: second integer.
  * Return: sum of integers.
@@ -26,7 +23,7 @@ int op_sub(int a, int b)
 /**
  * op_mul - product of two numbers.
  * @a: first integer.
- * @b second integer.
+ * @b: second integer.
  * Return: product of integers.
  */
 int op_mul(int a, int b)
