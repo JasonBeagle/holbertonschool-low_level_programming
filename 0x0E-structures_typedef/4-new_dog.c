@@ -13,35 +13,42 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	/*Pointer dog_t of dog type*/
+	/* struct name dog_t and value being struct *dog */
 	dog_t *dog;
-	int len1, len2;
-	/*Determines length, of string name & owner*/
-	/*Assigns value of name to len1, and owner to len2*/
-	len1 = _strlen(name);
-	len2 = _strlen(owner);
-	/*Value at *dog is malloc size of dog_t*/
-	dog = malloc(sizeof(dog_t));
-	/*If *dog is empty, return NULL*/
+	/* len1, len2 int values for string length of name & owner*/
+	int len1, len2; /*
+	*  measures strings for name & owner and assigns
+	   value accordingly to len1 and len2
+*/	len1 = _strlen(name);
+	len2 = _strlen(owner); /*
+	*  allocates memory for dog_t which is struct dog
+*/	dog = malloc(sizeof(dog_t));
+
 	if (dog == NULL)
-		return (NULL);
-	/*Allocate memory for member name in pointer god, *dog */
-	dog->name = malloc((sizeof(char)) * (len1 + 1));
-	/*If name is empty, free memory and return null*/
+		return (NULL); /*
+	*  derefrencing struct member name and allocating memory
+	*  size of char type * len1 plus null byte
+*/	dog->name = malloc((sizeof(char)) * (len1 + 1));
+
 	if (dog->name == NULL)
 	{
 		free(dog);
 		return (NULL);
-	}
-
-	dog->owner = malloc((sizeof(char)) * (len2 + 1));
+	} /*
+	*  dereferencing struct member ownere and allocating memory
+	*  size of char * len2 plus null
+*/	dog->owner = malloc((sizeof(char)) * (len2 + 1)); /*
+	*  if owner empty, return null
+*/
 	if (dog->owner == NULL)
 	{
 		free(dog);
 		free(dog->name);
 		return (NULL);
-	}
-	_strcpy(dog->name, name);
+	} /*
+	*  copies strings for name & owner into struct members
+	*  assign this as value using ->
+*/	_strcpy(dog->name, name);
 	_strcpy(dog->owner, owner);
 	dog->age = age;
 
