@@ -74,9 +74,9 @@ char *_strcpy(char *dest, char *src)
 	return (dest);
 }
 /**
-*_strlen - returns length of a string.
-*@str: string to be evaluated.
-*Return: the length of the string.
+* _strlen - returns length of a string.
+* @str: string to be evaluated.
+* Return: the length of the string.
 */
 int _strlen(char *str)
 {
