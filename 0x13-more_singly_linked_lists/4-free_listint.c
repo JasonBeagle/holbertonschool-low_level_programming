@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * freelist_int - frees a linked list from memory.
+ * free_listint - frees a linked list from memory.
  * @head: pointer to linked list.
  *
  * Return: void, the great beyond, nothingness
