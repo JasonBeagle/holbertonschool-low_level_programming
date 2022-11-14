@@ -3,7 +3,7 @@
 /**
  * add_dnodeint - function adds a new node at the beginning of a list.
  * @head: first node.
- n: numb given.
+ * @n: number to enter..
  *
  * Return: the address of the new element, or NULL if it failed.
  */
